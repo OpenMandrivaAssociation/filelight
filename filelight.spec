@@ -1,6 +1,6 @@
 Name:    filelight
 Summary: Graphical disk usage statistics
-Version: 4.7.95
+Version: 4.7.97
 Release: 1
 Group: Graphical desktop/KDE
 License: LGPLv2
