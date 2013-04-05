@@ -1,6 +1,6 @@
 Name:		filelight
 Summary:	Graphical disk usage statistics
-Version:	4.10.1
+Version:	4.10.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -40,6 +40,9 @@ areas using a file manager.
 %makeinstall_std -C build
 
 %changelog
+* Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
+- New version 4.10.2
+
 * Sat Mar 09 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.1-1
 - New version 4.10.1
 
