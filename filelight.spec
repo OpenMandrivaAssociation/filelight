@@ -1,7 +1,7 @@
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	4.13.3
-Release:	1
+Version:	14.12.0
+Release:	2
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
@@ -40,6 +40,15 @@ areas using a file manager.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 14.12.0-1
+- New version 14.12.0
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
+- New version 4.14.2
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
+- New version 4.14.1
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
 
