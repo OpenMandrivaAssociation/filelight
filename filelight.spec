@@ -28,8 +28,8 @@ areas using a file manager.
 %files
 %doc %{_docdir}/HTML/en/filelight
 %{_sysconfdir}/xdg/*
-%{_libdir}/plugins/filelightpart.so
 %{_bindir}/filelight
+%{_libdir}/qt5/plugins/filelightpart.so
 %{_datadir}/applications/org.kde.filelight.desktop
 %{_iconsdir}/*/*/actions/views_filelight.*
 %{_iconsdir}/*/*/apps/filelight.*
