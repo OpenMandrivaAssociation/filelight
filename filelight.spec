@@ -8,6 +8,8 @@ Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(ECM)
+BuildRequires:	ninja
 
 %description
 Filelight allows you to quickly understand exactly where your
@@ -34,7 +36,7 @@ areas using a file manager.
 %setup -q
 
 %build
-%cmake -G Ninja
+%cmake_kde5
 ninja
 
 %install
