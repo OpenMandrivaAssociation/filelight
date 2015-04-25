@@ -10,6 +10,13 @@ Url:		http://utils.kde.org/projects/filelight/
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	ninja
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5Parts)
+BuildRequires:	cmake(KF5Solid)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5I18n)
 
 %description
 Filelight allows you to quickly understand exactly where your
