@@ -7,9 +7,8 @@ Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
-BuildRequires:	ninja
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5Solid)
@@ -41,10 +40,10 @@ areas using a file manager.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
-ninja
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install
+%ninja_install -C build
