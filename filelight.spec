@@ -2,8 +2,8 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	15.04.3
-Release:	2
+Version:	15.08.0
+Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
