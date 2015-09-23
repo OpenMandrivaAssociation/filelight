@@ -16,6 +16,7 @@ BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(Qt5Script)
 
 %description
 Filelight allows you to quickly understand exactly where your
