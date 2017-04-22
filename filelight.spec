@@ -2,7 +2,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -25,8 +25,7 @@ system as a set of concentric segmented-rings. You can use it
 to locate hotspots of disk usage and then manipulate those
 areas using a file manager.
 
-%files
-%doc %{_docdir}/HTML/en/filelight
+%files -f %{name}.lang
 %{_sysconfdir}/xdg/*
 %{_bindir}/filelight
 %{_libdir}/qt5/plugins/filelightpart.so
@@ -36,6 +35,17 @@ areas using a file manager.
 %{_datadir}/kservices5/filelightpart.desktop
 %{_datadir}/kxmlgui5/filelight
 %{_datadir}/kxmlgui5/filelightpart
+%doc %{_docdir}/HTML/en/filelight
+%lang(de) %doc %{_docdir}/HTML/de/filelight
+%lang(es) %doc %{_docdir}/HTML/es/filelight
+%lang(et) %doc %{_docdir}/HTML/et/filelight
+%lang(fr) %doc %{_docdir}/HTML/fr/filelight
+%lang(it) %doc %{_docdir}/HTML/it/filelight
+%lang(nl) %doc %{_docdir}/HTML/nl/filelight
+%lang(pt) %doc %{_docdir}/HTML/pt/filelight
+%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/filelight
+%lang(sv) %doc %{_docdir}/HTML/sv/filelight
+%lang(uk) %doc %{_docdir}/HTML/uk/filelight
 
 #----------------------------------------------------------------------
 
@@ -48,3 +58,4 @@ areas using a file manager.
 
 %install
 %ninja_install -C build
+%find_lang %{name}
