@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   filelight-17.12.1.tar.xz: 7f43aad4f8392fc1b7b63b04800f716b01a2dfb9
+sources:
+  filelight-17.12.2.tar.xz: 950b2b893a9911bab4d7b994f44ab6ad58642ed3
