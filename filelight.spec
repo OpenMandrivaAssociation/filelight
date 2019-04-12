@@ -2,8 +2,8 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	 18.12.3
-Release:	2
+Version:	 19.04.0
+Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
