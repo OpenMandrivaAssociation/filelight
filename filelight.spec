@@ -2,7 +2,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -26,7 +26,8 @@ to locate hotspots of disk usage and then manipulate those
 areas using a file manager.
 
 %files -f %{name}.lang
-%{_sysconfdir}/xdg/*
+%config %{_sysconfdir}/xdg/filelightrc
+%{_datadir}/qlogging-categories5/*
 %{_bindir}/filelight
 %{_datadir}/applications/org.kde.filelight.desktop
 %{_iconsdir}/*/*/apps/filelight.*
