@@ -2,12 +2,12 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Parts)
