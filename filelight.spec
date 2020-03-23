@@ -2,12 +2,13 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	19.12.3
+Version:	20.03.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		filelight-20.03.80-qt-5.15.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Parts)
@@ -37,7 +38,7 @@ areas using a file manager.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build

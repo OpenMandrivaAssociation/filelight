@@ -1,0 +1,63 @@
+diff -up filelight-20.03.80/src/remoteLister.cpp.omv~ filelight-20.03.80/src/remoteLister.cpp
+--- filelight-20.03.80/src/remoteLister.cpp.omv~	2020-03-23 13:10:16.174449675 +0100
++++ filelight-20.03.80/src/remoteLister.cpp	2020-03-23 13:18:51.897327518 +0100
+@@ -26,9 +26,10 @@
+ 
+ #include <KDirLister>
+ 
+-#include <QLinkedList>
+ #include <QWidget>
+ 
++#include <list>
++
+ namespace Filelight
+ {
+ 
+@@ -39,7 +40,7 @@ namespace Filelight
+ 
+ struct Store {
+ 
+-    typedef QLinkedList<Store*> List;
++    typedef std::list<Store*> List;
+ 
+     /// location of the folder
+     const QUrl url;
+@@ -62,7 +63,7 @@ struct Store {
+ 
+         if (parent) {
+             parent->folder->append(folder);
+-            if (parent->stores.isEmpty()) {
++            if (parent->stores.empty()) {
+                 return parent->propagate();
+             }
+             else
+@@ -113,7 +114,7 @@ void RemoteLister::onCompleted()
+     for (KFileItemList::ConstIterator it = items.begin(), end = items.end(); it != end; ++it)
+     {
+         if (it->isDir())
+-            m_store->stores += new Store(it->url(), it->name(), m_store);
++            m_store->stores.push_back(new Store(it->url(), it->name(), m_store));
+         else
+             m_store->folder->append(it->name().toUtf8().constData(), it->size());
+ 
+@@ -121,7 +122,7 @@ void RemoteLister::onCompleted()
+     }
+ 
+ 
+-    if (m_store->stores.isEmpty()) {
++    if (m_store->stores.empty()) {
+         //no directories to scan, so we need to append ourselves to the parent folder
+         //propagate() will return the next ancestor that has stores left to be
+         //scanned, or root if we are done
+@@ -133,9 +134,9 @@ void RemoteLister::onCompleted()
+         }
+     }
+ 
+-    if (!m_store->stores.isEmpty())
++    if (!m_store->stores.empty())
+     {
+-        Store::List::Iterator first = m_store->stores.begin();
++        Store::List::iterator first = m_store->stores.begin();
+         const QUrl url((*first)->url);
+         Store *currentStore = m_store;
+ 
