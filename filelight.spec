@@ -2,7 +2,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -18,6 +18,7 @@ BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(Qt5Script)
+BuildRequires:	cmake(Qt5Test)
 
 %description
 Filelight allows you to quickly understand exactly where your
