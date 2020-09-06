@@ -2,7 +2,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	20.08.0
+Version:	20.08.1
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
