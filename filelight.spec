@@ -19,6 +19,7 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(Qt5Script)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5QuickControls2)
 
 %description
 Filelight allows you to quickly understand exactly where your
