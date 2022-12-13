@@ -2,7 +2,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
