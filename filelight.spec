@@ -1,9 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
 Version:	23.04.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
@@ -21,6 +21,12 @@ BuildRequires:	cmake(Qt5Script)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(Qt5QuickControls2)
+BuildRequires:	cmake(KF5QQC2DesktopStyle)
+BuildRequires:	qml(org.kde.kirigami)
+BuildRequires:	qml(org.kde.quickcharts)
+Requires:	qml(org.kde.kirigami)
+Requires:	qml(org.kde.quickcharts)
+Requires:	qqc2-desktop-style
 
 %description
 Filelight allows you to quickly understand exactly where your
