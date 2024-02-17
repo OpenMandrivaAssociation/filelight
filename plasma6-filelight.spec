@@ -1,13 +1,20 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Graphical disk usage statistics
 Name:		plasma6-filelight
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/utilities/filelight/-/archive/%{gitbranch}/filelight-%{gitbranchd}.tar.bz2#/filelight-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/filelight-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6KIO)
 BuildRequires:	cmake(KF6Parts)
@@ -46,7 +53,7 @@ areas using a file manager.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n filelight-%{version}
+%autosetup -p1 -n filelight-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
