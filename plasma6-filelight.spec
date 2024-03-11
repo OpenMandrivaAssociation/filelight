@@ -6,7 +6,7 @@
 Summary:	Graphical disk usage statistics
 Name:		plasma6-filelight
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		http://utils.kde.org/projects/filelight/
@@ -33,7 +33,7 @@ BuildRequires:	qml(org.kde.kirigami)
 BuildRequires:	qml(org.kde.quickcharts)
 Requires:	qml(org.kde.kirigami)
 Requires:	qml(org.kde.quickcharts)
-Requires:	qqc2-desktop-style
+Requires:	kf6-qqc2-desktop-style
 
 %description
 Filelight allows you to quickly understand exactly where your
