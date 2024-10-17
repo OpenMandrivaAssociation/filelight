@@ -6,7 +6,7 @@ Version:	23.08.5
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
-Url:		http://utils.kde.org/projects/filelight/
+Url:		https://utils.kde.org/projects/filelight/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5KIO)
