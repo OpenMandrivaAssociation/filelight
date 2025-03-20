@@ -6,7 +6,7 @@
 Summary:	Graphical disk usage statistics
 Name:		plasma6-filelight
 Version:	24.12.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 Url:		https://utils.kde.org/projects/filelight/
