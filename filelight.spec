@@ -5,7 +5,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -35,6 +35,11 @@ Requires:	qml(org.kde.kirigami)
 Requires:	qml(org.kde.quickcharts)
 Requires:	kf6-qqc2-desktop-style
 
+%rename plasma6-filelight
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Filelight allows you to quickly understand exactly where your
 diskspace is being used by graphically representing your file
@@ -49,18 +54,3 @@ areas using a file manager.
 %{_datadir}/applications/org.kde.filelight.desktop
 %{_iconsdir}/*/*/apps/filelight.*
 %{_datadir}/metainfo/org.kde.filelight.appdata.xml
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n filelight-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang filelight --with-html
