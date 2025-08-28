@@ -5,7 +5,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	25.04.3
+Version:	25.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -54,3 +54,4 @@ areas using a file manager.
 %{_datadir}/applications/org.kde.filelight.desktop
 %{_iconsdir}/*/*/apps/filelight.*
 %{_datadir}/metainfo/org.kde.filelight.appdata.xml
+%{_datadir}/kio/servicemenus/filelight.desktop
