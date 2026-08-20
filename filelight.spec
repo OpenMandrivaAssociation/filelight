@@ -5,7 +5,7 @@
 
 Summary:	Graphical disk usage statistics
 Name:		filelight
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -38,6 +38,7 @@ Requires:	kf6-qqc2-desktop-style
 %rename plasma6-filelight
 
 BuildSystem:	cmake
+BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
